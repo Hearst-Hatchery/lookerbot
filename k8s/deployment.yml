@@ -32,12 +32,10 @@ spec:
               cpu: 100m
               memory: 128M
           env:
-            - name: GOOGLE_CLOUD_BUCKET
-              value: "{{ google_cloud_bucket }}"
-            - name: GOOGLE_CLOUD_CREDENTIALS_JSON
-              value: "{{ google_cloud_credentials_json }}"
-            - name: GOOGLE_CLOUD_PROJECT
-              value: "{{ google_cloud_project }}"
+            - name: AWS_ACCESS_KEY_ID
+              value: "{{ aws_access_key_id }}"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "{{ aws_secret_access_key }}"
             - name: LOOKER_URL
               value: "{{ looker_url }}"
             - name: LOOKER_API_BASE_URL
@@ -54,6 +52,10 @@ spec:
               value: "{{ port }}"
             - name: SLACK_API_KEY
               value: "{{ slack_api_key }}"
+            - name: SLACKBOT_S3_BUCKET
+              value: "{{ slackbot_s3_bucket }}"
+            - name: SLACKBOT_S3_BUCKET_REGION
+              value: "{{ slackbot_s3_bucket_region }}"
             - name: SLACK_SLASH_COMMAND_TOKEN
               value: "{{ slack_slash_command_token }}"
           ports:
